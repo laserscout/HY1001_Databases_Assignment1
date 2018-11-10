@@ -1,0 +1,82 @@
+% !TeX spellcheck = el_GR-en_US
+  \documentclass[11pt]{article}
+  \usepackage{geometry}
+  \geometry{a4paper, top=2.5cm, bottom=2.5cm, left=2.2cm,
+    right=2.2cm}
+  \usepackage{fontspec}
+  \usepackage[nonumeralsign]{xgreek}
+  \usepackage{fancyhdr}
+  \usepackage{hyperref}
+  \usepackage{enumitem}
+  \usepackage{cite}
+  \usepackage{multirow}
+  \usepackage{graphicx}
+
+  \setmainfont{Baskerville}
+  \setmonofont{Consolas}
+
+  \graphicspath{ {./images/} }
+  
+  \newcommand{\ypertitlos}{Εργασία στο μάθημα Βάσεις Δεδομένων}
+  \newcommand{\titlos}{AwesomenameDB}
+  \newcommand{\ypotitlos}{Βάση δεδομένων για εκδηλώσεις στην πόλη}
+  \newcommand{\paradoteo}{1ο Παραδοτέο}
+  \newcommand{\omada}{Ομάδα 19 αν θυμάμαι καλά...}
+  \newcommand{\student}[3]{#1&#2&#3\\}
+  \newcommand{\melosA}{\student{Μπλάννινγκ
+      Φρανκ}{6689}{frankgou@auth.gr}}
+  \newcommand{\melosB}{\student{Θεοδωρίδου Χριστίνα}{8055}{}}
+  \newcommand{\melosC}{\student{Ζησης Μηλης Εμμανουηλ}{8053}{}}
+  \newcommand{\hmnia}{\today}
+  
+  \pagestyle{fancy}
+  \lhead{Βάσεις Δεδομένων 2018}
+  \rhead{\titlos}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0.4pt}
+  \setlength{\headheight}{14pt}
+
+  \hypersetup{colorlinks=true, linkcolor=black, urlcolor=blue, citecolor=blue}
+  \urlstyle{same}
+
+  \begin{document}
+  \thispagestyle{empty}
+  {\centering
+    \Large\ypertitlos\\
+    \vspace{7cm}
+    \Huge\titlos\\
+    \Large\ypotitlos\\
+    \vspace{2cm}
+  }
+  \hfill \paradoteo
+  
+  \vspace{8cm}
+  \begin{tabular}[b]{l l l}
+    \omada&&\\
+    \melosA
+    \melosB
+    \melosC
+  \end{tabular}
+  
+  {\centering
+    \vspace{2cm}
+    \hmnia\\
+  }
+  \newpage
+
+  \tableofcontents
+  \listoffigures
+
+  \newpage
+  
+  \input{intro.tex}
+  \input{users.tex}
+  \input{entities.tex}
+  % \input{2.past_implementations.tex}
+  % \input{3.our_implementation.tex}
+
+  % \bibliographystyle{ieeetr}
+  % \bibliography{cites}{}
+  % \bibliographystyle{plain}
+
+\end{document}
