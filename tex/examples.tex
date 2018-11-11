@@ -1,0 +1,45 @@
+\section{Παραδείγματα}
+
+\subsection{Παραδείγματα Πινάκων}
+
+(Δώστε ενδεικτικά παραδείγματα εγγραφών για κάθε πίνακα της βάσης.)
+
+Παράδειγμα για τον πίνακα Airport της FlightsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  airport\_code & name & city & country \\ \hline
+  SKG & Makedonia & Thessaloniki & Greece \\ \hline
+  ATH & Eleftherios Venizelos & Athens & Greece \\ \hline
+  KVA & Megas Alexandros & Kavala & Greece \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+\subsection{Παραδείγματα Ερωτημάτων}
+
+(Δώστε ενδεικτικά παραδείγματα χρήσιμων ερωτημάτων.)
+
+Παράδειγμα για τη FlightsDB:
+
+έστω οι σχέσεις:
+
+\begin{itemize}[noitemsep]
+\item CUSTOMER(cust\_id, firstname, lastname, phone, street, city,
+  zip)
+\item RESERVATION(flight\_id, date, cust\_id, ticket\_no, seat\_no)
+\end{itemize}
+
+Για μια πτήση (έστω την AA101) υποθέτουμε ότι ο/η αεροσυνοδός θα ήθελε
+να έχει τη λίστα των επιβατών μαζί με χρήσιμες πληροφορίες για το
+check in (id επιβάτη, αριθμός εισιτηρίου, θέση, όνομα και επώνυμο για
+κάθε επιβάτη). Εκτελούμε το παρακάτω ερώτημα:
+
+πticket\_no, seat\_no, cust\_id(σflight\_id=AA101(RESERVATION))
+πcust\_id, firstname, lastname(CUSTOMER)
+
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "main"
+%%% End:
