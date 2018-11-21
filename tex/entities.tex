@@ -172,17 +172,77 @@
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Artist\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει 1 καλλιτέχνη\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
+  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Concert_\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι Συναυλία\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
   \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Artist \\ \hline
+  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Concert\\ \cline{2-2}
+                     & Μερική Συμμετοχή του Event \\ \hline
   \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
 
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Theater_\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι θέατρο\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
+ \textbf{Συμμετοχή} & Ολική Συμμετοχή του Theater\ \cline{2-2}
+                     & Μερική Συμμετοχή του Event \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Sports Event_\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι αθλητική\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
+ \textbf{Συμμετοχή} & Ολική Συμμετοχή του Sports Event\\ \cline{2-2}
+                     & Μερική Συμμετοχή του Event \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Awareness Event_\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι επαγρύπνησης\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
+ \textbf{Συμμετοχή} & Ολική Συμμετοχή του Awareness Event\\ \cline{2-2}
+                     & Μερική Συμμετοχή του Event \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Performer\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει 1 performer\\ \hline
+  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
+                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
+  \textbf{Λόγος πληθικότητας} & 1:1 \\ \hline
+  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Performer \\ \cline{2-2}
+                     & Ολική Συμμετοχή του Event\\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
 
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Performer\_Is\_Cast_\\ \hline
+  \textbf{Περιγραφή} & Κάθε performer μπορεί να είναι θίασος\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
+  \textbf{Συμμετοχή}  & Μερική Συμμετοχή του Performer \\
+                      & Ολική Συμμετοχή του Cast \\ \cline{2-2}  \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
+\begin{tabular}[]ea{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Performer\_Is\_Team_\\ \hline
+  \textbf{Περιγραφή} & Κάθε performer μπορεί να είναι ομάδα\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
+  \textbf{Συμμετοχή}  & Μερική Συμμετοχή του Performer \\
+                      & Ολική Συμμετοχή του Team \\ \cline{2-2}  \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
   \textbf{Όνομα Συσχέτισης} & Event\_Has\_Location\\ \hline
@@ -196,30 +256,7 @@
 \end{tabular}
 
 
-\begin{tabular}[]{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Date\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει 1 ημερομηνία\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Date \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
 
-
-\begin{tabular}[]{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Date\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει 1 ημερομηνία\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Date \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
