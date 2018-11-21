@@ -3,18 +3,18 @@
 
 \subsection{Πεδία ορισμού}
 
-(Προσδιορίστε τα πεδία ορισμού που θα χρησιμοποιήσετε για το σχεσιακό
-μοντέλο.)
-
-Παράδειγμα για τη FlightsDB:
 
 \begin{tabular}{|p{6cm}|p{6cm}|}
 \hline
-Πεδίο Ορισμού & Τύπος \\ \hline
-Ακέραιος & INT \\ \hline
-Κωδ\_Αεροδρομίου & CHAR(3) \\ \hline
-Απλό\_Αλφαριθμητικό & VARCHAR(25) \\ \hline
-Διεύθυνση & VARCHAR(35) \\ \hline
+  Πεδίο Ορισμού & Τύπος \\ \hline
+  Ακέραιος & INT \\ \hline
+  Όνομα & VARCHAR(40) \\ \hline
+  Εκδηλώσεις & ENUMERATED\{Μουσική, Παράσταση, Ταινία, Σπορ,
+               Εκδήλωση\} \\ \hline
+  Δυαδικό & ENUMERATED\{Ναι, Όχι\} \\ \hline
+  Κείμενο & VARCHAR(140) \\ \hline
+  Διεύθυνση & VARCHAR(35) \\ \hline
+  
 … & … \\ \hline
 \end{tabular}
 
