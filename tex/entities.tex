@@ -2,7 +2,7 @@
 
 \subsection{Γενική Περιγραφή}
 
-Οι οντότητες είναι : οι Εκδήλωση, η Τοποθεσία, η Ημερομηνία, ο Καλλιτέχνης - Διοργανωτής, η Αγορά Εισιτηρίων και η Προσβασιμότητα. Για κάθε εκδήλωση θα πρέεπι να καταγράφεται το όνομά της, το είδος της και το όνομα του καλλιτέχνη-διοργανωτή.
+Οι οντότητες είναι : οι Εκδήλωση, η Τοποθεσία, ο Ερμηνευτής-Ομάδα ,ο Διοργανωτής,τα Σημεία Προπώλησης Εισιτηρίων , η Κάρτα και ο Χρήστης. Για κάθε εκδήλωση θα πρέεπι να καταγράφεται το όνομά της, το είδος της, η ημερομηνία που διεξάγεται, η ώρα και το όνομα του καλλιτέχνη-ομάδας.
 \\
 \\
 \underline{Υποθέσεις:}
@@ -19,292 +19,285 @@
 Παρακάτω φαίνονται οι οντότητες της \titlos, η περιγραφή τους καθώς και κάποια γνωρίσματά τους.
 
 \begin{center}
-\begin{tabular}[]{|c | c|}
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
 \hline
-\textbf{Όνομα Οντότητας}   &  Event  \\ \hline 
+\textbf{Όνομα Οντότητας}   &  Εκδήλωση  \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι εκδηλώσεις \\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline               
 \textbf{Γνωρίσματα}        &  \underline{Κωδικός εκδήλωσης} \\
             ~              &  Ύπαρξη Εισιτηρίου \\
              ~             &  Κοινό που απευθύνεται \\
               ~            &  Σκοπός \\ 
+                           &  Εύρος τιμών \\
                            &  Ημερομηνία \\
                            &  Ώρα έναρξης\\
-\\ \hline
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Concert  \\ \hline 
+ \hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+ \hline
+\textbf{Όνομα Οντότητας}   &  Μουσική εκδήλωση  \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι μουσικές εκδηλώσεις \\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline               
 \textbf{Γνωρίσματα}        &  Ύπαρξη θέσεων καθήμενων \\
                            &  Opening act \\
-\\ \hline
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Theater  \\ \hline 
+ \hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Όνομα Οντότητας}   &  Θέατρο \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι θεατρικές εκδηλώσεις \\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline               
 \textbf{Γνωρίσματα}        &  Ύπαρξη θέσεων VIP \\
                            &  Διάρκεια \\
-\\ \hline
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Sports Event  \\ \hline 
+\hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Όνομα Οντότητας}   &  Αθλητική εκδήλωση \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι αθλητικές εκδηλώσεις \\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline               
 \textbf{Γνωρίσματα}        &  Είδος αθλήματος \\
                            &  Ύπαρξη θέσεων VIP \\
                            
-\\ \hline
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Awareness Event  \\ \hline 
-\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι εκδηλώσεις επαγρύπνησης προς ένα αντικείμενο \\ \hline 
-\textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline               
-\textbf{Γνωρίσματα}        &  Αντικείμενο εκδήλωσης \\
-                           
-\\ \hline
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Location \\ \hline 
+\hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Όνομα Οντότητας}   &  Τοποθεσία \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τοποθεσίες των εκδηλώσεων \\ \hline 
-\textbf{Ιδιότητες}         &  Ασθενής οντότητα \\ \hline 
+\textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\ \hline 
 \textbf{Γνωρίσματα}        &  \underline{Κωδικός τοποθεσίας} \\
                            &  Όνομα \\
-           ~               &  Οδός \\
-             ~             &  ΤΚ\\
                            &  Εσωτερικός ή Εξωτερικός χώρος \\
                            &  Τηλέφωνο \\
+                           &  Δίεύθυνση \\ 
+                           &  Ύπαρξη υποδομών ΑΜΕΑ \\ 
                            & { \begin{tabular}[]{c|c}
-                            Κάτάλογος τιμών           & μπύρα \\
+                           
+                           Κάτάλογος τιμών            & μπύρα \\
                                                       & κρασί \\
                                                       & ποτό \\  
-                           \end{tabular} }  
-\\ \hline
-
-\end{tabular}
-
-\begin{tabular}[]{|c | c | } 
+                           \end{tabular} }  \\
 \hline
-\textbf{Όνομα Οντότητας}   &  Performer \\ \hline 
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+\hline
+\hline
+\textbf{Όνομα Οντότητας}   &  Ερμηνευτής-Ομάδα \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι καλλιτέχνες \\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα    \\    \hline           
-\textbf{Γνωρίσματα}        &  \underline{Κωδικός καλλιτέχνη}\\
+\textbf{Γνωρίσματα}        &  \underline{Κωδικός ερμηνευτή}\\
                            &  Όνομα  \\
            ~               &  Καταγωγή \\
-\\ \hline 
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Singer \\ \hline 
+\hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|} 
+ \hline
+\textbf{Όνομα Οντότητας}   &  Τραγουδιστής \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τραγουδιστές\\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα    \\    \hline           
 \textbf{Γνωρίσματα}        &  Είδος \\
                            &  Ημερομηνία γέννησης \\
-            ~        
-\\ \hline 
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Cast \\ \hline 
-\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι θίασοι \\ \hline 
-\textbf{Ιδιότητες}         &  Ισχυρή οντότητα    \\    \hline           
-\textbf{Γνωρίσματα}        &  Όνομα σκηνοθέτη \\
 \hline 
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
 \hline
-\textbf{Όνομα Οντότητας}   &  Team \\ \hline 
+\textbf{Όνομα Οντότητας}   &  Ομάδα \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι ομάδες \\ \hline 
 \textbf{Ιδιότητες}         &  Ισχυρή οντότητα    \\    \hline           
-\textbf{Γνωρίσματα}        &  Όνομα προπονητή \\
-           ~               &  Καταγωγή \\
-            ~              &  Είδος \\
-\\ \hline 
-
- \\ \hline
-\textbf{Όνομα Οντότητας}   &  Tickets \\ \hline 
-\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τρόποι αγοράς εισιτηρίων \\\hline 
-\textbf{Ιδιότητες}         &  Ασθενής οντότητα \\       \hline           
-\textbf{Γνωρίσματα}        &  \underline{Κωδικός εκδήλωσης} \\
-                          %  &  Ύπαρξη εισιτηρίου \\
-                           &  Φυσικά καταστήματα προπώλησης \\
-           ~               &  Ηλεκτρονικά καταστήματα προπώλησης \\
-            ~              &  Εύρος τιμών \\
+\textbf{Γνωρίσματα}        &  Όνομα υπεύθύυου\\
 \hline 
-\hline
-\textbf{Όνομα Οντότητας}   &  Accessibility \\ \hline 
-\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τρόποι πρόσβασης στην τοποθεσια \\ \hline 
-\textbf{Ιδιότητες}         &  Ασθενής οντότητα \\  \hline                 
-\textbf{Γνωρίσματα}        &  \underline{Κωδικός Τοποθεσίας} \\
-                           &  Ύπαρξη χώρου στάθμευσης\\
-            ~              &  Ύπαρξη κοντινών στάσεων \\
-             ~             &  Ύπαρξη υποδομών για ΑΜΕΑ \\
-                           & { \begin{tabular}[]{c|c}
-                             Ύπαρξη τοποθεσιών με μισθωμένα ΜΜΜ           & τοποθεσία \\
-                                                                         & ώρα \\ 
-                           \end{tabular} }  
-\\ \hline
-\hline
-\textbf{Όνομα Οντότητας}   &  Promotion \\ \hline 
-\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τρόποι προώθησης της εκδήλωσης \\ \hline 
-\textbf{Ιδιότητες}         &  Ασθενής οντότητα \\  \hline                 
-\textbf{Γνωρίσματα}        &  \underline{Κωδικός Εκδήλωσης} \\
-                           &  Ραδιοφωνικοί σταθμοί \\
-            ~              &  Τηλεοπτικοί σταθμοί \\
-             ~             &  Τοποθεσίες αφισών \\
-                           & { \begin{tabular}[]{c|c}
-                             Διαδικτυακή διαφήμηση & Κοινωνικά δίκτυα \\
-                                                   & Ψηφιακές εφημερίδες \\
-                                                   & Διάφορες ιστοσελίδες\\ 
-                           \end{tabular} }  
-\\ \hline
 \end{tabular}
+\vspace{0.3 cm}
 
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+ \hline
+\textbf{Όνομα Οντότητας}   &  Φσυικά σημεία προπώλησης \\ \hline 
+\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τρόποι αγοράς εισιτηρίων \\\hline 
+\textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\       \hline           
+\textbf{Γνωρίσματα}        &  \underline{Κωδικός σημείου} \\
+                           &  Όνομα \\
+                           &  Τηλέφωνο \\
+                           &  Διεύθυνση \\ 
+\hline 
+\end{tabular}
+\vspace{0.3 cm}
 
-\begin{tabular}[]{|c | c | } 
-\\ \hline
-\textbf{Όνομα Οντότητας}   &  Communication \\ \hline 
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Όνομα Οντότητας}   &  Διοργανωτής \\ \hline 
 \textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι τρόποι επικοινωνίας \\ \hline 
-\textbf{Ιδιότητες}         &  Ασθενής οντότητα \\  \hline                 
-\textbf{Γνωρίσματα}        &  \underline{Κωδικός Εκδήλωσης} \\
-                           &  \underline{Όνομα Καλλιτέχνη} \\
+\textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline                 
+\textbf{Γνωρίσματα}        &  \underline{Κωδικός Παραγωγού} \\
             ~              &  Όνομα εταιρίας παραγωγής \\
              ~             &  email \\
                            &  Τηλέφωνο \\
-\\ \hline
+                           &  password \\
+\hline
 \end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+\hline
+\textbf{Όνομα Οντότητας}   &  Κάρτα \\ \hline 
+\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι πιστωτικές/χρεωστικές κάρτες \\ \hline 
+\textbf{Ιδιότητες}         &  Ασθενής οντότητα \\  \hline                 
+\textbf{Γνωρίσματα}        &  \underline{Αριθμός Κάρτας} \\
+            ~              &  CSV \\
+             ~             &  Διεύθυνση \\
+\hline
+\end{tabular}
+\begin{tabular}[]{|p{4cm}|p{10cm}|}\\ \hline
+\textbf{Όνομα Οντότητας}   &  Χρήστης\\ \hline 
+\textbf{Περιγραφή}         &  Οντότητα που αποθηκεύονται οι χρήστες\\ \hline 
+\textbf{Ιδιότητες}         &  Ισχυρή οντότητα \\  \hline                 
+\textbf{Γνωρίσματα}        &  \underline{Κωδικός Χρήστη} \\
+            ~              &  Ονοματεπώνυμο \\
+                           &  email \\
+                           &  password \\
+\hline
+\end{tabular}
+\vspace{0.3 cm}
+
 \end{center}
-
-
 \subsection{Καθορισμός Συσχετίσεων}
 
 Παρακάτω αναφέρονται οι συσχετίσεις της βάσης δεδομένων \titlos
-
+\begin{center}
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Concert_\\ \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση είναι συναυλία\\ \hline
   \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι Συναυλία\\ \hline
   \textbf{Ιδιότητες} & Is-A  \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Concert\\ \cline{2-2}
-                     & Μερική Συμμετοχή του Event \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
+\vspace{0.3 cm}
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Theater_\\ \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση είναι θέατρο\\ \hline
   \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι θέατρο\\ \hline
   \textbf{Ιδιότητες} & Is-A  \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
- \textbf{Συμμετοχή} & Ολική Συμμετοχή του Theater\ \cline{2-2}
-                     & Μερική Συμμετοχή του Event \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
-\begin{tabular}[]{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Sports Event_\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι αθλητική\\ \hline
-  \textbf{Ιδιότητες} & Is-A  \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
- \textbf{Συμμετοχή} & Ολική Συμμετοχή του Sports Event\\ \cline{2-2}
-                     & Μερική Συμμετοχή του Event \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
-\begin{tabular}[]{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Is\_Awareness Event_\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι επαγρύπνησης\\ \hline
-  \textbf{Ιδιότητες} & Is-A  \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
- \textbf{Συμμετοχή} & Ολική Συμμετοχή του Awareness Event\\ \cline{2-2}
-                     & Μερική Συμμετοχή του Event \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
-\begin{tabular}[]{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Performer\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει 1 performer\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & 1:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Performer \\ \cline{2-2}
-                     & Ολική Συμμετοχή του Event\\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
+\vspace{0.3 cm}
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Performer\_Is\_Cast_\\ \hline
-  \textbf{Περιγραφή} & Κάθε performer μπορεί να είναι θίασος\\ \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση είναι αθλητική\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση μπορεί να είναι Αθλητική\\ \hline
   \textbf{Ιδιότητες} & Is-A  \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή}  & Μερική Συμμετοχή του Performer \\
-                      & Ολική Συμμετοχή του Cast \\ \cline{2-2}  \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
-\begin{tabular}[]ea{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Performer\_Is\_Team_\\ \hline
-  \textbf{Περιγραφή} & Κάθε performer μπορεί να είναι ομάδα\\ \hline
-  \textbf{Ιδιότητες} & Is-A  \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή}  & Μερική Συμμετοχή του Performer \\
-                      & Ολική Συμμετοχή του Team \\ \cline{2-2}  \\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
+  \end{tabular}
+\vspace{0.3 cm}
+
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Location\\ \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση έχει ερμηνευτή\\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει ερμηνευτή\\ \hline
+  \textbf{Ιδιότητες} & Has-A  \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
+  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Ερμηνευτή\\ \cline{2-2}
+                     & Ολική Συμμετοχή του Εκδήλωση \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} &Ο ερμηνευτής είναι ομάδα\\ \hline
+  \textbf{Περιγραφή} & Ο ερμηνευτής μπορεί να είναι ομάδα\\ \hline
+  \textbf{Ιδιότητες} & Is-A  \\ \hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση έχει τοποθεσία\\ \hline
   \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει 1 τοποθεσία\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
+  \textbf{Ιδιότητες} & Has-A \\ \hline
   \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Location \\ \hline
+  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Εκδήλωση\\ \cline{2-2}
+                     & Μερική Συμμετοχή του Τοποθεσία \\ \hline
   \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
-
-
+\vspace{0.3 cm}
 
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Tickets\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει μέρη που πωλούνται εισιτήρια\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Tickets\\ \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση έχει σημεία προπώλησης \\ \hline
+  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει μέρη που προπωλούνται εισιτήρια\\ \hline
+  \textbf{Ιδιότητες} & Has-A \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:m \\ \hline
+  \textbf{Συμμετοχή} & Μερική Συμμετοχή του Εκδήλωση \\ \cline{2-2}
+                     & Μερική Συμμετοχή του Σημεία προπώλησης\\ \hline
   \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
+\vspace{0.3 cm}
+
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Location\_Has\_Accessibility\\ \hline
-  \textbf{Περιγραφή} & Κάθε τοποθεσία πρέπει να έχει τρόπους πρόσβασης\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:1 \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Location \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Accessibility\\ \hline
-  \textbf{Γνωρίσματα} & - \\ \hline
-\end{tabular}
-
-\begin{tabular}[]{|p{4cm}|p{10cm}|}
-  \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Communication\\ \hline
+  \textbf{Όνομα Συσχέτισης} & Η εκδήλωση έχει διοργανωτή \\  \hline
   \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει τρόπους επικοινωνίας\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:n \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Communication \\ \hline
+  \textbf{Ιδιότητες} & Has-A \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:m \\ \hline
+  \textbf{Συμμετοχή} & Mερική Συμμετοχή του Διοργανωτής \\ \cline{2-2}
+                     & Μερική Συμμετοχή του Εκδήλωση \\ \hline
   \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
+\vspace{0.3 cm}
 
 \begin{tabular}[]{|p{4cm}|p{10cm}|}
   \hline
-  \textbf{Όνομα Συσχέτισης} & Event\_Has\_Promotion\\ \hline
-  \textbf{Περιγραφή} & Κάθε εκδήλωση πρέπει να έχει τρόπους προώθησης\\ \hline
-  \textbf{Ιδιότητες} & Has-A \{αναφέρετε αν είναι Is-A και αν είναι
-                       Αναδρομική, Προσδιορίζουσα, Τριαδική\} \\ \hline
-  \textbf{Λόγος πληθικότητας} & n:n \\ \hline
-  \textbf{Συμμετοχή} & Ολική Συμμετοχή του Event \\ \cline{2-2}
-                     & Μερική Συμμετοχή του Promotion \\ \hline
+  \textbf{Όνομα Συσχέτισης} & Μέθοδος πληρωμής\\  \hline
+  \textbf{Περιγραφή} & Κάθε χρήστης μπορεί να έχει κάρτα\\ \hline
+  \textbf{Ιδιότητες} & Has-A \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:m \\ \hline
+  \textbf{Συμμετοχή} & Mερική Συμμετοχή του Χρήστης \\ \cline{2-2}
+                     & Ολική Συμμετοχή του Κάρτα \\ \hline
   \textbf{Γνωρίσματα} & - \\ \hline
 \end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Αγορά\\  \hline
+  \textbf{Περιγραφή} & Κάθε μπορεί να αγοράσει εισιτήρια ηλεκτρονικά\\ \hline
+  \textbf{Ιδιότητες} & Has-A \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:m \\ \hline
+  \textbf{Συμμετοχή} & Mερική Συμμετοχή του Χρήστης \\ \cline{2-2}
+                     & Μερική Συμμετοχή του Εκδήλωση \\ \hline
+  \textbf{Γνωρίσματα} & Τύπος εισιτηρίου\\ \hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\begin{tabular}[]{|p{4cm}|p{10cm}|}
+  \hline
+  \textbf{Όνομα Συσχέτισης} & Ενδιαφέρον \\  \hline
+  \textbf{Περιγραφή} & Κάθε χρήστης μπορεί να αποθηκέυσει τις εκδηλώσεις που τον ενδιαφέρουν \\ \hline
+  \textbf{Ιδιότητες} & Has-A \\ \hline
+  \textbf{Λόγος πληθικότητας} & n:m \\ \hline
+  \textbf{Συμμετοχή} & Mερική Συμμετοχή του Χρήστης \\ \cline{2-2}
+                     & Μερική Συμμετοχή του Εκδήλωση \\ \hline
+  \textbf{Γνωρίσματα} & - \\ \hline
+\end{tabular}
+\vspace{0.3 cm}
+
+\end{center}
+
 
 \subsection{Διάγραμμα Οντοτήτων/Συσχετίσεων}
 
