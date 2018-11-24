@@ -40,7 +40,7 @@
   Τύπος                 & Εκδηλώσεις                       \\ \hline
   Ύπαρξη Εισιτηρίου     & Δυαδικό                          \\ \hline
   Κοινό που απευθύνεται & Όνομα                            \\ \hline
-  Σκοπός                & Κείμενο                          \\ \hline
+  Περιγραφή             & Κείμενο                          \\ \hline
   Ημερομηνία            & Ημερομηνία                       \\ \hline
   Ώρα έναρξης           & Ώρα                              \\ \hline
   Διεξάγεται            & Ακέραιος                         \\ \hline
@@ -196,8 +196,8 @@
   Όνομα Σχέσης             & Διοργανωτής                   \\ \hline
   \multicolumn{2}{|l|}{\textbf{Γνωρίσματα:}}               \\ \hline
   Όνομα                    & Τύπος                         \\ \hline
-  Κωδικός Παραγωγού        & Ακέραιος                      \\ \hline
-  Όνομα εταιρίας παραγωγής & Όνομα                         \\ \hline
+  Κωδικός Διοργανωτή       & Ακέραιος                      \\ \hline
+  Όνομα εταιρίας           & Όνομα                         \\ \hline
   email                    & email                         \\ \hline
   Τηλέφωνο                 & Τηλέφωνο                      \\ \hline
   password                 & pass                          \\ \hline
@@ -209,7 +209,7 @@
 \begin{tabular}{|p{6cm}|p{8cm}|}
   \hline
   Όνομα Σχέσης    & Χρήστης                                \\ \hline
-  \Multicolumn{2}{|L|}{\textbf{Γνωρίσματα:}}               \\ \hline
+  \multicolumn{2}{|l|}{\textbf{Γνωρίσματα:}}               \\ \hline
   Όνομα           & Τύπος                                  \\ \hline
   Κωδικός Χρήστη  & Ακέραιος                               \\ \hline
   Ονοματεπώνυμο   & Όνομα                                  \\ \hline
@@ -317,21 +317,6 @@
 έχει εκδηλώσει ενδιαφέρων.
 
 % >>> insert equation here <<<
-
-
-\begin{itemize}[noitemsep]
-\item FLIGHT(flight\_id, airline, fromairport, toairport, price,
-  plane\_id)
-\item AIRPLANE(plane\_id, plane\_name) 
-\end{itemize}
-
-Μια όψη που περιέχει όλες τις αεροπορικές εταιρίες που υπάρχουν στο
-σύστημα και τα ονόματα των αεροπλάνων που χρησιμοποιούν είναι η
-παρακάτω:
-
-ρAIRLINES(πairline, plane\_name(πairline, plane\_id(FLIGHT)
-πplane\_id, plane\_name(AIRPLANE)))
-
 
 
 %%% Local Variables:
