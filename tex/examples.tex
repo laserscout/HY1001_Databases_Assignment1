@@ -2,24 +2,178 @@
 
 \subsection{Παραδείγματα Πινάκων}
 
-(Δώστε ενδεικτικά παραδείγματα εγγραφών για κάθε πίνακα της βάσης.)
-
-
-manos 
-
-Παράδειγμα για τον πίνακα Airport της FlightsDB:
+Παράδειγμα για τον πίνακα Μουσική\_Εκδήλωση της EventsDB:
 
 \begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
   \hline
-  airport\_code & name & city & country \\ \hline
-  SKG & Makedonia & Thessaloniki & Greece \\ \hline
-  ATH & Eleftherios Venizelos & Athens & Greece \\ \hline
-  KVA & Megas Alexandros & Kavala & Greece \\ \hline
+  Κωδικός\_Εκδήλωσης & Όνομα & Ύπαρξη\_Θέσεων\_Καθήμενων & Είδος & Opening\_Act \\ \hline
+  8053 & Ημισκούμπρια \- 23rd Anniversary Live & Όχι & Hip hop Live & DJ Πρύτανης warm up set \\ \hline
+  8055 & Συναυλία Θάνου Μικρούτσικου & Όχι & Έντεχνο τραγούδι \- Συναυλία & Μίλτος Πασχαλίδης \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Αθλητική\_Εκδήλωση της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Εκδήλωσης & Όνομα & Ύπαρξη\_Θέσεων\_VIP & Άθλημα \\ \hline
+  4444 & Τελικός\_Πρωταθλήματος\_ΠΑΟΚ \- Παναθηναϊκός & Ναι & Ποδόσφαιρο \\ \hline
+  1235 & Προβολη Live Τελικού Roldand Garros & Ναι & Τέννις \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Θέατρο της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Εκδήλωσης & Όνομα & Ύπαρξη\_Θέσεων\_VIP & Διάρκεια \\ \hline
+  7777 & Οι Βάκχες του Ευρυπίδη & Όχι & 114 \\ \hline
+  0666 & Stand up Comedy by George Carlin & Ναι & 74 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Εισιτήριο της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Εκδήλωσης & Τύπος\_Εισιτηρίου & Τιμή \\ \hline
+  7777 & Φοιτητικό & 14 \\ \hline
+  7777 & Ενηλίκων & 28 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Φυσικό\_Σημείο\_Προπώλησης της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Σημείου & Όνομα & Τηλέφωνο & Διεύθυνση \\ \hline
+  12345 & Καταστήματα Public Τσιμισκή & 2310227288 & Τσιμισκή 24 \\ \hline
+  14310 & Γραμματεία Τμήματος ΗΜΜΥ \- Σούλα Γκλάμουρους & 2310 666 666 & Θεσσαλονίκη 54124 \\ \hline
 \end{tabular}
   
 Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
 
 \subsection{Παραδείγματα Ερωτημάτων}
+
+Παράδειγμα για τον πίνακα Προπώληση της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Σημείου & Κωδικός\_Εκδήλωσης \\ \hline
+  12345 & 7777 \\ \hline
+  14310 & 8055 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Τοποθεσία της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Τοποθεσίας & Όνομα & Εσωτερικός\_Χώρος & Τηλέφωνο & Διεύθυνση & Ύπαρξη\_Υποδομών\_ΑΜΕΑ & Τιμή\_Μπύρας & Τιμή\_Κρασιού & Τιμή\_Ποτού \\ \hline
+  132435 & WE \- Sports \& culture facility & Ναι & 2310 284 700 & 3ης Σεπτεμβρίου 3 & Όχι & 4 & 6 & 7 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Εκδήλωση της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Εκδήλωσης & Όνομα & Τύπος & Ύπαρξη\_Εισιτηρίου & Κοινό & Περιγραφή & Ημερομηνία & Ώρα\_Έναρξης & Κωδικός\_Τοποθεσίας & Κωδικός\_Ερμηνευτή & Κωδικός\_Διοργανωτή \\ \hline
+  6969 & Manos' Beerpong Challenge X Erasmus & Αθλητική Εκδήλωση & Όχι & Θαρραλέοι Φοιτητές & Try to not get shitfaced & 23 Δεκεμβρίου 2018 & 21:00 & 696969 & NULL & 721 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Καλλιτέχνης\_Ομάδα της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Ερμηνευτή & Καταγωγή & Ονοματεπώνυμο \\ \hline
+  122333 & Γαλατία & Αστερίξ \\ \hline
+  555551 & Σκανδιναβία & Ράγκναρ Λόθμπροκ \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα καλλιτέχνης της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Ερμηνευτή & Είδος & Ημερομηνία\_Γέννησης \\ \hline
+  555551 & Death Metal & 820 \\ \hline
+  666666 & Έντεχνο Λαικό & 14\/2\/1982 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Ομάδα της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Ερμηνευτή & Όνομα\_Υπευθύνου \\ \hline
+  444444 & Ιβάν Σαββίδης \\ \hline
+  382957 & Ηλίας Ψινάκης \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Διοργανωτής της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Διοργανωτή & Όνομα\_Εταιρίας & Τηλέφωνο & Email & Password \\ \hline
+  696969 & Party Animal Events & 6981811474 & manoszisis@yahoo.gr & godwontsaveyou0 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Χρήστης της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Χρήστη & Ονοματεπώνυμο & Email & Password \\ \hline
+  006689 & Φρανγκίσκος Μπλανίνγκιος & pinkypromises@gmail.com & WhyIsTheRumAlwaysGone? \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Κάρτα της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Αριθμός\_Κάρτας & Αριθμός\_Ασφαλείας & Κωδικός\_Χρήστη & Διεύθυνση \\ \hline
+  1234 5678 9999 & 489 & 006689 & Προβληματικού 6 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Αγορά της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Εκδήλωσης & Κωδικός\_Χρήστη & Τύπος\_Εισιτηρίου \\ \hline
+  0666 & 006689 & Υπερήλικων \\ \hline
+  8055 & 008055 & Εφήβικό
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
+
+Παράδειγμα για τον πίνακα Ενδιαφέρον της EventsDB:
+
+\begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \hline
+  Κωδικός\_Εκδήλωσης & Κωδικός\_Χρήστη \\ \hline
+  4444 & 008053 \\ \hline
+  1235 & 008053 \\ \hline
+\end{tabular}
+  
+Εκτίμηση για τον αριθμό των εγγραφών: \textasciitilde 40000
 
 (Δώστε ενδεικτικά παραδείγματα χρήσιμων ερωτημάτων.)
 
