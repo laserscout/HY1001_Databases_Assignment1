@@ -1,12 +1,12 @@
 -- MySQL dump 10.14  Distrib 5.5.57-MariaDB, for Win64 (AMD64)
 --
--- Host: localhost    Database: student
+-- Host: localhost    Database: EventDB
 -- ------------------------------------------------------
 -- Server version	5.5.57-MariaDB
 
-DROP SCHEMA IF EXISTS `student`;
-CREATE SCHEMA `student`;
-USE `student`;
+DROP SCHEMA IF EXISTS `EventDB`;
+CREATE SCHEMA `EventDB`;
+USE `EventDB`;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -23,186 +23,98 @@ USE `student`;
 -- Table structure for table `albums`
 --
 
-DROP TABLE IF EXISTS `albums`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `albums` (
-  `id` int(6) NOT NULL,
-  `name` varchar(45) NOT NULL,
-  `medium` char(3) NOT NULL,
-  `cost` decimal(10,2) DEFAULT NULL,
-  `genre` varchar(50) DEFAULT NULL,
-  `year_recorded` int(11) DEFAULT NULL,
-  `label` varchar(50) DEFAULT NULL,
-  `performer_id` int(6) DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `ATperformerID_idx` (`performer_id`),
-  CONSTRAINT `ATperformerID` FOREIGN KEY (`performer_id`) REFERENCES `performers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
 --
 -- Dumping data for table `albums`
 --
 
-LOCK TABLES `albums` WRITE;
+LOCK TABLES `Mousiki_ekdilosi` WRITE;
 /*!40000 ALTER TABLE `albums` DISABLE KEYS */;
-INSERT INTO `albums` VALUES (1,'The Black Light','vin',0.00,'Indie rock',1998,'Quarterstick',1),(2,'Magical Mystery Tour','vin',0.00,'Psychedelic rock',1967,'Parlophone, Capitol',2),(3,'Some Great Reward','vin',0.00,'Darkwave',1984,'Mute',3),(4,'Kind of Blue','cd',0.00,'Jazz',1959,'Columbia',4),(5,'Cigarettes & Alcohol','cd',0.00,'Britpop',1994,'Creation Records',5),(6,'Murder Ballads','cd',0.00,'Post punk',1996,'Mute Records',6),(7,'Body Language','cd',0.00,'Pop',2003,'Parlophone',7),(8,'Playing the Angel','cd',0.00,'Electronica',2005,'Mute',3),(9,'Batman Forever O.S.T.','cd',0.00,'Rock, R&B, Hip-Hop',1995,'Atlantic Records',0),(10,'Light Years','cd',0.00,'Pop',2000,'Parlophone, Capitol',NULL);
+INSERT INTO `Ekdilosi` VALUES (8053,'Imiz-23rd Anniversary Live','Oxi','Hip hop Live','DJ Dean warm up set'),(8055,'Sunaulia Thanou Mikroutsikou','Oxi','Entexno tragoudi-Sunaulia','Miltos Pasxalidis')
 /*!40000 ALTER TABLE `albums` ENABLE KEYS */;
 UNLOCK TABLES;
-
 --
 -- Temporary table structure for view `all_performers_tracks`
 --
 
-DROP TABLE IF EXISTS `all_performers_tracks`;
-/*!50001 DROP VIEW IF EXISTS `all_performers_tracks`*/;
-SET @saved_cs_client     = @@character_set_client;
-SET character_set_client = utf8;
-/*!50001 CREATE TABLE `all_performers_tracks` (
-  `tid` tinyint NOT NULL,
-  `tname` tinyint NOT NULL,
-  `pid` tinyint NOT NULL,
-  `pname` tinyint NOT NULL
-) ENGINE=MyISAM */;
-SET character_set_client = @saved_cs_client;
-
---
--- Table structure for table `performers`
---
-
-DROP TABLE IF EXISTS `performers`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `performers` (
-  `id` int(6) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `country` varchar(50) DEFAULT NULL,
-  `website` varchar(80) DEFAULT NULL,
-  `birth_date` datetime DEFAULT NULL,
-  `death_date` datetime DEFAULT NULL,
-  `is_group` bit(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `performers`
---
-
-LOCK TABLES `performers` WRITE;
-/*!40000 ALTER TABLE `performers` DISABLE KEYS */;
-INSERT INTO `performers` VALUES (0,'Various Artists',NULL,NULL,NULL,NULL,'\0'),(1,'Calexico','USA','www.casadecalexico.com','1996-01-01 00:00:00',NULL,''),(2,'The Beatles','UK','www.beatles.com','1960-10-01 00:00:00','1970-01-01 00:00:00',''),(3,'Depeche Mode','UK','http://www.depechemode.com/','1980-01-01 00:00:00',NULL,''),(4,'Miles Davis','USA','www.milesdavis.com','1926-05-25 00:00:00','1991-09-28 00:00:00','\0'),(5,'Oasis','UK','www.oasisinet.com','1991-01-01 00:00:00',NULL,''),(6,'Nick Cave','Australia','www.nick-cave.com','1957-09-22 00:00:00',NULL,'\0'),(7,'Kylie Minogue','Australia','www.kylie.com','1968-05-28 00:00:00',NULL,'\0'),(8,'Thom Yorke','UK','www.theeraser.net','1968-07-10 00:00:00',NULL,'\0');
-/*!40000 ALTER TABLE `performers` ENABLE KEYS */;
+LOCK TABLES `Athlitiki_ekdilosi` WRITE;
+INSERT INTO `Athlitiki_ekdilosi` VALUES (4444,'Telikos Prwtathlimatos PAOK-Panathinaikos ','Nai','Basket'),(1235,'Provoli Live Telikou Roland Garros','Nai','Tennis'),(6969,'Manos’ Beerpong Challenge X
+Erasmus','Oxi','Beerpong')
 UNLOCK TABLES;
 
---
--- Table structure for table `performers_tracks`
---
 
-DROP TABLE IF EXISTS `performers_tracks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `performers_tracks` (
-  `track_id` int(6) NOT NULL,
-  `performer_id` int(6) NOT NULL,
-  PRIMARY KEY (`track_id`,`performer_id`),
-  KEY `trackID_idx` (`track_id`),
-  KEY `PTperformerID` (`performer_id`),
-  CONSTRAINT `PTperformerID` FOREIGN KEY (`performer_id`) REFERENCES `performers` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `PTtrackID` FOREIGN KEY (`track_id`) REFERENCES `tracks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COMMENT='		';
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `performers_tracks`
---
-
-LOCK TABLES `performers_tracks` WRITE;
-/*!40000 ALTER TABLE `performers_tracks` DISABLE KEYS */;
-INSERT INTO `performers_tracks` VALUES (1,6),(2,4),(3,4),(4,1),(5,1),(6,2),(7,2),(8,3),(9,3),(10,5),(11,5),(12,6),(12,7),(13,6),(14,7),(15,3),(16,3);
-/*!40000 ALTER TABLE `performers_tracks` ENABLE KEYS */;
+LOCK TABLES `Theatro` WRITE;
+INSERT INTO `Theatro` VALUES (7777,'Oi Vakxes tou Euripidi ','Oxi','114'),(0666,'Stand up Comedy by George Carlin','Nai','74')
 UNLOCK TABLES;
 
---
--- Table structure for table `tracks`
---
-
-DROP TABLE IF EXISTS `tracks`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tracks` (
-  `id` int(6) NOT NULL AUTO_INCREMENT,
-  `name` varchar(45) NOT NULL,
-  `duration` decimal(8,2) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tracks`
---
-
-LOCK TABLES `tracks` WRITE;
-/*!40000 ALTER TABLE `tracks` DISABLE KEYS */;
-INSERT INTO `tracks` VALUES (4,'There Is a Light',4.23),(5,'So What',9.22),(6,'All Blues',11.33),(7,'Sideshow',2.20),(8,'Vinegaroon',1.06),(9,'I Am the Walrus',4.36),(10,'Blue Jay Way',3.55),(11,'Master and Servant',4.11),(12,'People Are People',3.52),(13,'I Am the Walrus',8.14),(14,'Cigarettes & Alcohol',4.50),(15,'Where the Wild Roses Grow',3.56),(16,'Crow Jane',4.13),(17,'Slow',3.16),(18,'Precious',4.09),(19,'Nothing\'s Impossible',4.21);
-/*!40000 ALTER TABLE `tracks` ENABLE KEYS */;
+LOCK TABLES `Eisitirio` WRITE;
+INSERT INTO `Eisitirio` VALUES (7777,'Foititiko','14'),(7777,'Enhlikwn','28'),(8053,'Enhlikwn','12'),(8055,'Foititiko','14'),
+(8055,'Enhlikwn','18'),(4444,'Enhlikwn','10'), (1235,'Enhlikwn','4'), (0666,'Enhlikwn','30'), (0666,'Yperhlikwn','20'), (6969,'Enhlikwn','5')
 UNLOCK TABLES;
 
---
--- Table structure for table `tracks_in_albums`
---
-
-DROP TABLE IF EXISTS `tracks_in_albums`;
-/*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `tracks_in_albums` (
-  `track_id` int(6) NOT NULL,
-  `album_id` int(6) NOT NULL,
-  `track_number` int(11) DEFAULT NULL,
-  PRIMARY KEY (`track_id`,`album_id`),
-  KEY `albumID_idx` (`album_id`),
-  CONSTRAINT `TAtrackID` FOREIGN KEY (`track_id`) REFERENCES `tracks` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `TAalbumID` FOREIGN KEY (`album_id`) REFERENCES `albums` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-/*!40101 SET character_set_client = @saved_cs_client */;
-
---
--- Dumping data for table `tracks_in_albums`
---
-
-LOCK TABLES `tracks_in_albums` WRITE;
-/*!40000 ALTER TABLE `tracks_in_albums` DISABLE KEYS */;
-INSERT INTO `tracks_in_albums` VALUES (1,9,9),(2,4,2),(3,4,4),(4,1,6),(5,1,11),(6,2,6),(7,2,4),(8,3,7),(9,3,3),(10,5,2),(11,5,1),(12,6,5),(13,6,8),(14,7,1),(15,8,5),(16,8,8);
-/*!40000 ALTER TABLE `tracks_in_albums` ENABLE KEYS */;
+LOCK TABLES `Fusiko_simeio_propolisis` WRITE;
+INSERT INTO `Fusiko_simeio_propolisis` VALUES (12345,'Katasthma Public Tsimiski','2310227288','Tsimiski 24'),(14310,'Grammateia tmhmatos HMMY - Soula Glamorous','2310666666','Thessaloniki 54124')
 UNLOCK TABLES;
 
---
--- Final view structure for view `all_performers_tracks`
---
+LOCK TABLES `Propwlhsh` WRITE;
+INSERT INTO `Propwlhsh` VALUES (12345, 7777), (12345, 0666),(12345, 8053),(12345, 8055),(14310,4444),(14310,1235),(14310,6969)
+UNLOCK TABLES;
 
-/*!50001 DROP TABLE IF EXISTS `all_performers_tracks`*/;
-/*!50001 DROP VIEW IF EXISTS `all_performers_tracks`*/;
-/*!50001 SET @saved_cs_client          = @@character_set_client */;
-/*!50001 SET @saved_cs_results         = @@character_set_results */;
-/*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8 */;
-/*!50001 SET character_set_results     = utf8 */;
-/*!50001 SET collation_connection      = utf8_general_ci */;
-/*!50001 CREATE ALGORITHM=UNDEFINED */
-/*!50013 DEFINER=`student`@`localhost` SQL SECURITY DEFINER */
-/*!50001 VIEW `all_performers_tracks` AS select `tracks`.`id` AS `tid`,`tracks`.`name` AS `tname`,`performers`.`id` AS `pid`,`performers`.`name` AS `pname` from ((`performers` join `performers_tracks` on((`performers`.`id` = `performers_tracks`.`performer_id`))) join `tracks` on((`tracks`.`id` = `performers_tracks`.`track_id`))) */;
-/*!50001 SET character_set_client      = @saved_cs_client */;
-/*!50001 SET character_set_results     = @saved_cs_results */;
-/*!50001 SET collation_connection      = @saved_col_connection */;
-/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+LOCK TABLES `Topothesia` WRITE;
+INSERT INTO `Topothesia` VALUES (132435,'WE - Sports & culture facility','Nai','2310284700','3hs Septemvriou 3', 'Oxi', 4, 6, 7),
+(532413,'Paok Sports Arena','Nai','2310192600','Pulaia-Xortiatis 555 35', 'Nai', NULL, NULL, NULL)
+UNLOCK TABLES;
 
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+LOCK TABLES `Ekdilosi` WRITE;
+INSERT INTO `Ekdilosi` VALUES (6969,'Manos’ Beerpong Challenge X Erasmus', 'Nai', 'Tharraleoi Foithtes', 'Try not to get shitfaced', 23/12/2018, 21:00, 132435, NULL, 72150),
+(8053,'Imiz-23rd Anniversary Live', 'Nai', 'Humoristes kai Hiphopades', 'Pame oloi mazi se mia paralia', 20/03/2019, 21:00, 532413, 122333, 11888),
+(8055,'Sunaulia Thanou Mikroutsikou', 'Nai', 'Eleutheroi kai xwrismenoi', 'Sunaulia', 18/06/2019, 20:30, 532413, 555551, 11888),
+(4444,'Telikos Prwtathlimatos PAOK-Panathinaikos', 'Nai', 'Arrwsta Paokia kuriws', 'Mhn ta spasete ola ola', 10/03/2019, 19:30, 532413, 444444, 11888),
+(1235,'Provoli Live Telikou Roland Garros', 'Nai', 'Filoi antisfairishs', 'Mpures sti misi timi', 29/05/2019, 16:30, 132435, NULL, 72150),
+(7777,'Oi Vakxes tou Euripidi', 'Nai', 'Psagmena tupakia', 'Le culture Upsilo', 19/12/2018, 20:30, 532413, 192837, 11888),
+(0666,'Stand Up comedy by George Carlin', 'Nai', 'Mh pareksigisiarides', 'One Last HBO special', 25/03/2019, 00:00, 532413, 382957, 72510)
+UNLOCK TABLES;
 
--- Dump completed on 2018-12-03 14:25:18
+LOCK TABLES `Kallitechnis-omada` WRITE;
+INSERT INTO `Kallitechnis-omada` VALUES (122333, 'Athina-Ellada', 'Metzelos,Mirthidatis,Dj Dean'),
+(555551, 'Ellada', 'Thanos Mikroutsikos'),
+(444444, 'Ellada', 'Omada basket enhlikwn PAOK'),
+(382957, 'USA cemetery', 'George Carlin’s Ghost'),
+(192837, 'Ellada', 'Anoterh dramatiki sxolh Thessalonikis'),
+UNLOCK TABLES;
+
+
+LOCK TABLES `kallitechnis` WRITE;
+INSERT INTO `kallitechnis` VALUES (555551, 'Entexno', 1947),(122333, 'Ellhniko hiphop', 1975)
+UNLOCK TABLES;
+
+LOCK TABLES `Diorganotis` WRITE;
+INSERT INTO `Diorganotis` VALUES (72150, 'Party Animal Events', '6981811474', 'manoszisis@yahoo.gr', '3ebb9abf12d5b17...'),
+(11888, 'Culture AE', '6979695949', 'og34582@mhrit.net', '2p3oroh2c3ri23i...')
+UNLOCK TABLES;
+
+LOCK TABLES `Xristis` WRITE;
+INSERT INTO `Xristis` VALUES (006689, 'Frangisios Blanningios', 'pinkypromises@gmail.com', '82a545b150da45c...'),
+(008055, 'Chrysiida Todorovic', 'cultureoverload@gmail.com', '2cur239vj293d...')
+UNLOCK TABLES;
+
+LOCK TABLES `Karta` WRITE;
+INSERT INTO `Karta` VALUES (123456789999, 489, 006689, 'Provlhmatikou 6'), (999987654321, 987, 008055, 'komodias 21')
+UNLOCK TABLES;
+
+LOCK TABLES `Agora` WRITE;
+INSERT INTO `Agora` VALUES (0666,006689, 'Yperhlikwn'), (8055, 008055, 'Efhviko'), (6969, 006689, 'Enhlikwn'), (4444, 008055, 'Enhlikwn')
+UNLOCK TABLES;
+
+LOCK TABLES `Endiaferon` WRITE;
+INSERT INTO `Endiaferon` VALUES (4444, 008055), (1235, 006689), (6969, 006689), (0666, 006689), (8055, 008055)
+UNLOCK TABLES;
+
+
+
+
+
+
+
+
+
+
