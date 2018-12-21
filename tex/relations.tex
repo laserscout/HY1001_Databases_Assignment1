@@ -35,12 +35,12 @@
   Όνομα                   & Τύπος                                   \\ \hline
   Κωδικός\_εκδήλωσης      & Ακέραιος                                \\ \hline
   Όνομα\_εκδήλωσης        & Όνομα                                   \\ \hline
-  Ύπαρξη\_εισιτηρίου      & Διαδικό                                 \\ \hline
+  Ύπαρξη\_εισιτηρίου      & Δυαδικό                                 \\ \hline
   Κοινό\_που\_απευθύνεται & Όνομα                                   \\ \hline
   Περιγραφή               & Κείμενο                                 \\ \hline
   Ημερομηνία              & Ημερομηνία                              \\ \hline
   Ώρα\_έναρξης            & Ώρα                                     \\ \hline
-  Κωδικός\_τοπεθεσίας     & Ακέραιος                                \\ \hline
+  Κωδικός\_τοποθεσίας     & Ακέραιος                                \\ \hline
   Κωδικός\_ερμηνευτή      & Ακέραιος                                \\ \hline
   Κωδικός\_διοργανωτή     & Ακέραιος                                \\ \hline
   \multicolumn{2}{l}{\textbf{Περιορισμοί Ακεραιότητας:}}            \\ \hline
@@ -129,7 +129,7 @@
   \multicolumn{2}{l}{\textbf{Γνωρίσματα:}}               \\ \hline
   Όνομα              & Τύπος                             \\ \hline
   Κωδικός\_ερμηνευτή & Ακέραιος                          \\ \hline
-  Ονοματεπώνυμο      & Όνομα                             \\ \hline
+  Όνομα              & Όνομα                             \\ \hline
   Καταγωγή           & Όνομα                             \\ \hline
   \multicolumn{2}{l}{\textbf{Περιορισμοί Ακεραιότητας:}} \\ \hline
   Πρωτεύον Κλειδί    & Κωδικός\_ερμηνευτή                \\ \hline
@@ -280,19 +280,21 @@
 
 \begin{equation}
   \begin{split}
-    &\text{EVENT} \leftarrow \sigma_{<\text{Τύπος} =
-      \text{"Εκδήλωση"}>}\text{Εκδήλωση} \\
-    &\text{ή}\\
-    &\text{EVENT} \leftarrow \sigma_{<\text{Τύπος} = \text{"Θεατρική
-        Εκδήλωση"}>}\text{Εκδήλωση} \bowtie \text{Θέατρο} \\
-    &\text{ή} \\
-    &\text{EVENT} \leftarrow \sigma_{<\text{Τύπος} = \text{"Αθλητική
-        Εκδήλωση"}>}\text{Εκδήλωση} \bowtie \text{Αθλητική\_εκδήλωση} \\
-    &\text{ή} \\
-    &\text{EVENT} \leftarrow \sigma_{<\text{Τύπος} = \text{"Μουσική
-        Εκδήλωση"}>}\text{Εκδήλωση} \bowtie \text{Μουσική\_εκδήλωση} \\
-    &\text{και} \\
-    &\text{EVENT} \bowtie \text{Τοποθεσία} \bowtie
+    \text{EVENT\_plain} \leftarrow& \text{Εκδήλωση}
+    \bowtie_{\text{Θεατρο.Κωδικος\_εκδήλωσης} \neq \text{Κωδικόσ\_εκδήλωσης}}
+    \text{Θεατρο}\\
+    &\bowtie_{\text{Αθλητική\_εκδήλωση.Κωδικος\_εκδήλωσης} \neq \text{Κωδικόσ\_εκδήλωσης}}
+    \text{Αθλητική\_εκδήλωση}\\
+    &\bowtie_{\text{Μουσική\_εκδήλωση.Κωδικος\_εκδήλωσης} \neq \text{Κωδικόσ\_εκδήλωσης}}
+    \text{Μουσική\_εκδήλωση} \\
+    \text{και}&\\
+    \text{EVENT\_Theater} \leftarrow& \text{Εκδήλωση} \bowtie \text{Θέατρο} \\
+    \text{και}&\\
+    \text{EVENT\_Sports} \leftarrow& \text{Εκδήλωση} \bowtie \text{Αθλητική\_εκδήλωση} \\
+    \text{και}&\\
+    \text{EVENT\_Music} \leftarrow& \text{Εκδήλωση} \bowtie \text{Μουσική\_εκδήλωση} \\
+    \text{και}&\\
+    \text{EVENT\_Quick} \leftarrow& \text{Εδήλωση} \bowtie \text{Τοποθεσία} \bowtie
     \text{Καλλιτέχνης-Ομάδα} \bowtie \text{Διοργ} \\
   \end{split}
 \end{equation}
