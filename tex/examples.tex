@@ -7,11 +7,11 @@
 \begin{table}[H]
   \centering
   \footnotesize
-\begin{tabular}[c]{|p{2cm}|p{2.5cm}|p{2.5cm}|p{2cm}|p{3.5cm}|}
+\begin{tabular}[c]{|p{2cm}|p{2.5cm}|p{2cm}|p{3.5cm}|}
   \hline
-  Κωδικός\_ Εκδήλωσης & Όνομα                           & Ύπαρξη\_Θέσεων\_ Καθήμενων & Είδος                       & Opening\_Act            \\ \hline
-  8053                & Ημισκούμπρια - 23rd Anniversary Live & Όχι                         & Hip hop Live                & DJ Πρύτανης warm up set \\ \hline
-  8055                & Συναυλία Θάνου Μικρούτσικου     & Όχι                         & Έντεχνο τραγούδι - Συναυλία & Μίλτος Πασχαλίδης       \\ \hline
+  Κωδικός\_ Εκδήλωσης & Ύπαρξη\_Θέσεων\_ Καθήμενων & Είδος                       & Opening\_Act            \\ \hline
+  8053                & Όχι                        & Hip hop Live                & DJ Πρύτανης warm up set \\ \hline
+  8055                & Όχι                        & Έντεχνο τραγούδι - Συναυλία & Μίλτος Πασχαλίδης       \\ \hline
 \end{tabular}
 \end{table}
 
@@ -22,12 +22,12 @@
 \begin{table}[H]
   \centering
   \footnotesize
-  \begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
+  \begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|}
   \hline
-  Κωδικός\_Εκδήλωσης & Όνομα & Ύπαρξη\_Θέσεων\_VIP & Άθλημα \\ \hline
-  4444 & Τελικός Πρωταθλήματος ΠΑΟΚ - Παναθηναϊκός & Ναι & Μπάσκετ \\ \hline
-  1235 & Προβολή Live Τελικού Roldand Garros & Ναι & Τένις \\ \hline
-  6969 & Manos' Beerpong Challenge X Erasmus & Όχι & Beerpong \\ \hline
+  Κωδικός\_Εκδήλωσης & Ύπαρξη\_Θέσεων\_VIP & Άθλημα   \\ \hline
+  4444               & Ναι                 & Μπάσκετ  \\ \hline
+  1235               & Ναι                 & Τένις    \\ \hline
+  6969               & Όχι                 & Beerpong \\ \hline
 \end{tabular}
 \end{table}
   
@@ -38,11 +38,11 @@
 \begin{table}[H]
   \centering
   \footnotesize
-  \begin{tabular}{|p{3cm}|p{4cm}|p{3cm}|p{3cm}|}
-  \hline
-  Κωδικός\_Εκδήλωσης & Όνομα & Ύπαρξη\_Θέσεων\_VIP & Διάρκεια \\ \hline
-  7777 & Οι Βάκχες του Ευρυπίδη & Όχι & 114 \\ \hline
-  0666 & Stand up Comedy by George Carlin & Ναι & 74 \\ \hline
+  \begin{tabular}{|p{3cm}|p{3cm}|p{3cm}|}
+  \Hline
+  Κωδικός\_Εκδήλωσης & Ύπαρξη\_Θέσεων\_VIP & Διάρκεια \\ \hline
+  7777               & Όχι                 & 114      \\ \hline
+  0666               & Ναι                 & 74       \\ \hline
 \end{tabular}
 \end{table}
   
@@ -308,7 +308,7 @@
 εκδήλωσης, η ημερομηνία και είτε το όνομα της τοποθεσίας διεξαγωγής
 είτε το όνομα του καλλιτέχνη.  Κάποια κριτήρια αναζήτησής εκδηλώσεων
 είναι βάση του ονόματος του τοποθεσίας (\ref{eq1}), όνομα του
-καλλιτέχνη (\ref{eq2}), ή συγκεκριμένου τύπου εκδήλωσης (\ref{eq3}).
+καλλιτέχνη (\ref{eq2}).
 
 \begin{equation} \label{eq1}
 \begin{split}
@@ -329,15 +329,6 @@
 \text{Καλλιτέχνης-Ομάδα}
 \\
 &\Pi_{<\text{Όνομα\_εκδήλωσης, Ημερομηνία,Όνομα\_Τοποθεσίας}>}A
-\end{split}
-\end{equation}
-
-\begin{equation} \label{eq3}
-\begin{split}
-&A \leftarrow \text{Καλλιτέχνης-Ομάδα} \bowtie
-\sigma_{<\text{Τύπος} = \text{"Μουσική εκδήλωση"}>}\text{Εκδήλωση}
-\\
-&\Pi_{<\text{Όνομα\_εκδήλωσης, Ημερομηνία, Όνομα}>}A
 \end{split}
 \end{equation}
 
